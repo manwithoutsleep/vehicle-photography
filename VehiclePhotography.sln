@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.Tests.Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.Tests.DAO", "VehiclePhotography.Tests.DAO\VehiclePhotography.Tests.DAO.csproj", "{FB97B0D4-1FBD-4041-9E6E-7BBE7ADCAD18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI", "WinUI\WinUI.csproj", "{8F98A9D0-7A86-4E09-A124-0DEEBD079AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.App.WinUI", "WinUI\VehiclePhotography.App.WinUI.csproj", "{8F98A9D0-7A86-4E09-A124-0DEEBD079AF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

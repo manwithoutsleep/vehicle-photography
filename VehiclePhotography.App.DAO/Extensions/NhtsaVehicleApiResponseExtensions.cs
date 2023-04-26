@@ -8,8 +8,12 @@ namespace VehiclePhotography.App.DAO.Extensions
     {
         public static VehicleInfo ToVehicleInfo(this NhtsaVehicleApiResponse source)
         {
-            var result = source.Results.First();
-            return new VehicleInfo(result.Make, result.Model, int.Parse(result.ModelYear), null, result.VIN, result.VehicleType);
+            var result = source.Results.FirstOrDefault();
+            if (result == null)
+            {
+                return null;
+            }
+            return new VehicleInfo(result.Make, result.Model, int.Parse(result.ModelYear), result.VIN, result.VehicleType);
         }
     }
 }

@@ -7,34 +7,34 @@ namespace VehiclePhotography.App.Domain.Libraries
     {
         public static VehicleTypes StringToVehicleType(string value)
         {
-            switch (value)
+            switch (value.ToLower())
             {
-                case "Motorcycle":
+                case "motorcycle":
                     return VehicleTypes.Motorcycle;
-                case "PassengerCar":
-                case "Passenger Car":
+                case "passengercar":
+                case "passenger car":
                     return VehicleTypes.PassengerCar;
-                case "Truck":
+                case "truck":
                     return VehicleTypes.Truck;
-                case "Bus":
+                case "bus":
                     return VehicleTypes.Bus;
-                case "Trailer":
+                case "trailer":
                     return VehicleTypes.Trailer;
-                case "MultipurposePassengerVehicle":
-                case "MultipurposePassengerVehicle (MPV)":
-                case "Multipurpose Passenger Vehicle":
-                case "Multipurpose Passenger Vehicle (MPV":
+                case "multipurposepassengervehicle":
+                case "multipurposepassengervehicle (mpv)":
+                case "multipurpose passenger vehicle":
+                case "multipurpose passenger vehicle (mpv)":
                     return VehicleTypes.MultipurposePassengerVehicle;
-                case "LowSpeedVehicle":
-                case "LowSpeedVehicle (LSV)":
-                case "Low Speed Vehicle":
-                case "Low Speed Vehicle (LSV)":
+                case "lowspeedvehicle":
+                case "lowspeedvehicle (lsv)":
+                case "low speed vehicle":
+                case "low speed vehicle (lsv)":
                     return VehicleTypes.LowSpeedVehicle;
-                case "IncompleteVehicle":
-                case "Incomplete Vehicle":
+                case "incompletevehicle":
+                case "incomplete vehicle":
                     return VehicleTypes.IncompleteVehicle;
-                case "OffRoadVehicle":
-                case "Off Road Vehicle":
+                case "offroadvehicle":
+                case "off road vehicle":
                     return VehicleTypes.OffRoadVehicle;
                 default:
                     throw new ArgumentException($"{value} cannot be converted to VehicleTypes");

@@ -2,7 +2,7 @@
 using VehiclePhotography.App.Domain.Enums;
 using VehiclePhotography.App.Domain.Values;
 
-namespace VehiclePhotography.Tests.Domain.Values
+namespace VehiclePhotography.Tests.Domain.EnumsTests.VehicleTypesTests
 {
     [TestClass]
     public class VehicleTypeShould
@@ -13,7 +13,7 @@ namespace VehiclePhotography.Tests.Domain.Values
             // Arrange
             var vehicleType = "Motorcycle";
             // Act
-            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant color", "irrelevant vin", vehicleType);
+            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant vin", vehicleType);
             // Assert
             Assert.AreEqual(VehicleTypes.Motorcycle, sut.VehicleType);
         }

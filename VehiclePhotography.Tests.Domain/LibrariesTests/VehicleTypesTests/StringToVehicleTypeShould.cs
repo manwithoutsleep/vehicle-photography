@@ -9,6 +9,7 @@ namespace VehiclePhotography.Tests.Domain.LibrariesTests.VehicleTypesTests
     {
         [DataTestMethod()]
         [DataRow("Motorcycle", VehicleTypes.Motorcycle)]
+        [DataRow("MOTORCYCLE", VehicleTypes.Motorcycle)]
         [DataRow("PassengerCar", VehicleTypes.PassengerCar)]
         [DataRow("Passenger Car", VehicleTypes.PassengerCar)]
         [DataRow("Truck", VehicleTypes.Truck)]
@@ -17,7 +18,7 @@ namespace VehiclePhotography.Tests.Domain.LibrariesTests.VehicleTypesTests
         [DataRow("MultipurposePassengerVehicle", VehicleTypes.MultipurposePassengerVehicle)]
         [DataRow("MultipurposePassengerVehicle (MPV)", VehicleTypes.MultipurposePassengerVehicle)]
         [DataRow("Multipurpose Passenger Vehicle", VehicleTypes.MultipurposePassengerVehicle)]
-        [DataRow("Multipurpose Passenger Vehicle (MPV", VehicleTypes.MultipurposePassengerVehicle)]
+        [DataRow("Multipurpose Passenger Vehicle (MPV)", VehicleTypes.MultipurposePassengerVehicle)]
         [DataRow("LowSpeedVehicle", VehicleTypes.LowSpeedVehicle)]
         [DataRow("LowSpeedVehicle (LSV)", VehicleTypes.LowSpeedVehicle)]
         [DataRow("Low Speed Vehicle", VehicleTypes.LowSpeedVehicle)]

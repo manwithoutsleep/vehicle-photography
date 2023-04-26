@@ -8,18 +8,21 @@ namespace VehiclePhotography.App.Domain.Values
         public string Make { get; private set; }
         public string Model { get; private set; }
         public int Year { get; private set; }
-        public string Color { get; private set; }
         public string Vin { get; private set; }
         public VehicleTypes VehicleType { get; private set; }
 
-        public VehicleInfo(string make, string model, int year, string color, string vin, string vehicleType)
+        public VehicleInfo(string make, string model, int year, string vin, string vehicleType)
         {
             Make = make;
             Model = model;
             Year = year;
-            Color = color;
             Vin = vin;
             VehicleType = StringConversions.StringToVehicleType(vehicleType);
+        }
+
+        public override string ToString()
+        {
+            return $"Make: {Make}, Model: {Model}, Year: {Year}, Vin: {Vin}, VehicleType: {VehicleType}";
         }
     }
 }

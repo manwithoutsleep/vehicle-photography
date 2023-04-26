@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "VehiclePhotography.App.WebUI (Package)": {
+    "WinUI (Package)": {
       "commandName": "MsixPackage"
     },
-    "VehiclePhotography.App.WebUI (Unpackaged)": {
+    "WinUI (Unpackaged)": {
       "commandName": "Project"
     }
   }

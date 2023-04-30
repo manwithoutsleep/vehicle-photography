@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.App.ViewModels", "VehiclePhotography.App.ViewModels\VehiclePhotography.App.ViewModels.csproj", "{036595F3-71D2-4945-B945-558FB7ED3CFD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.App.Domain", "VehiclePhotography.App.Domain\VehiclePhotography.App.Domain.csproj", "{2005E153-ADCF-4208-B982-FC13AEF3D98A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.App.DAO", "VehiclePhotography.App.DAO\VehiclePhotography.App.DAO.csproj", "{DEF9C8A2-68E7-4390-BD2C-05C4CE451893}"
@@ -12,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.Tests.Domain", "VehiclePhotography.Tests.Domain\VehiclePhotography.Tests.Domain.csproj", "{18146FE3-3F01-476E-81F1-99809B226429}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehiclePhotography.Tests.DAO", "VehiclePhotography.Tests.DAO\VehiclePhotography.Tests.DAO.csproj", "{FB97B0D4-1FBD-4041-9E6E-7BBE7ADCAD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehiclePhotography.Tests.Library", "VehiclePhotography.Tests.Library\VehiclePhotography.Tests.Library.csproj", "{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +105,22 @@ Global
 		{FB97B0D4-1FBD-4041-9E6E-7BBE7ADCAD18}.Release|x64.Build.0 = Release|Any CPU
 		{FB97B0D4-1FBD-4041-9E6E-7BBE7ADCAD18}.Release|x86.ActiveCfg = Release|Any CPU
 		{FB97B0D4-1FBD-4041-9E6E-7BBE7ADCAD18}.Release|x86.Build.0 = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|x64.Build.0 = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Debug|x86.Build.0 = Debug|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|ARM64.Build.0 = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|x64.ActiveCfg = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|x64.Build.0 = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|x86.ActiveCfg = Release|Any CPU
+		{D336C86B-D84A-4DF6-B6B9-D3C778021A4B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

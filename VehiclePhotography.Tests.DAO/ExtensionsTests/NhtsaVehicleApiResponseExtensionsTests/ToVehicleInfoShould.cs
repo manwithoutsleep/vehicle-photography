@@ -34,7 +34,7 @@ namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseEx
             var actual = source.ToVehicleInfo();
 
             // Assert
-            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar");
+            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar", "expected/thumbnail/path.jpg");
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 
@@ -72,7 +72,7 @@ namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseEx
             var actual = source.ToVehicleInfo();
 
             // Assert
-            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar");
+            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar", "expected/thumbnail/path.jpg");
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 

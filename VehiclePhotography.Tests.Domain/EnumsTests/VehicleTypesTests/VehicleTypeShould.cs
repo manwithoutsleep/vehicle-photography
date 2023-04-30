@@ -13,7 +13,7 @@ namespace VehiclePhotography.Tests.Domain.EnumsTests.VehicleTypesTests
             // Arrange
             var vehicleType = "Motorcycle";
             // Act
-            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant vin", vehicleType);
+            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant vin", vehicleType, "irrelevant/thumbnail/path.jpg");
             // Assert
             Assert.AreEqual(VehicleTypes.Motorcycle, sut.VehicleType);
         }

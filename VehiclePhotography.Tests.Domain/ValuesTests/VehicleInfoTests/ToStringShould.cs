@@ -10,7 +10,7 @@ namespace VehiclePhotography.Tests.Domain.ValuesTests.VehicleInfoTests
         public void ReturnSerializedObject()
         {
             // Arrange
-            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant vin", "Motorcycle");
+            var sut = new VehicleInfo("irrelevant make", "irrelevant model", 1904, "irrelevant vin", "Motorcycle", "irrelevant/thumbnail/path.jpg");
 
             // Act
             var actual = sut.ToString();

@@ -13,7 +13,7 @@ namespace VehiclePhotography.App.DAO.Extensions
             {
                 return null;
             }
-            return new VehicleInfo(result.Make, result.Model, int.Parse(result.ModelYear), result.VIN, result.VehicleType);
+            return new VehicleInfo(result.Make, result.Model, int.Parse(result.ModelYear), result.VIN, result.VehicleType, string.Empty);
         }
     }
 }

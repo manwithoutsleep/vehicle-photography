@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Net;
-using System.Text.Json;
 using VehiclePhotography.App.DAO.Services;
 using VehiclePhotography.App.Domain.Values;
 using VehiclePhotography.Tests.DAO.ValueModels;
@@ -16,7 +15,7 @@ namespace VehiclePhotography.Tests.DAO
         {
             // Arrange
             var givenVin = "JF2SJAEC1EH460860";
-            var expectedVehicleInfo = new VehicleInfo("SUBARU", "Forester", 2014, givenVin, "MULTIPURPOSE PASSENGER VEHICLE (MPV)");
+            var expectedVehicleInfo = new VehicleInfo("SUBARU", "Forester", 2014, givenVin, "MULTIPURPOSE PASSENGER VEHICLE (MPV)", "expected/thumbnail/path.jpg");
             var httpClientFactory = CreateMockHttpClientFactory(expectedVehicleInfo);
             var sut = new NhtsaVehicleApiDao(httpClientFactory);
 
@@ -40,7 +39,7 @@ namespace VehiclePhotography.Tests.DAO
 
             // Assert
             Assert.IsNotNull(actual);
-            var expected = new VehicleInfo("SUBARU", "Forester", 2014, givenVin, "MULTIPURPOSE PASSENGER VEHICLE (MPV)");
+            var expected = new VehicleInfo("SUBARU", "Forester", 2014, givenVin, "MULTIPURPOSE PASSENGER VEHICLE (MPV)", "expected/thumbnail/path.jpg");
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 

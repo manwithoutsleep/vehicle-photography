@@ -1,10 +1,9 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
-using VehiclePhotography.App.DAO.Interfaces;
-using VehiclePhotography.App.Domain.Values;
+﻿using VehiclePhotography.App.DAO.Interfaces;
+using VehiclePhotography.App.Models.Values;
 using System.Text.Json;
 using VehiclePhotography.App.DAO.DataTransferObjects;
 using VehiclePhotography.App.DAO.Extensions;
+using VehiclePhotography.App.Models.Exceptions;
 
 namespace VehiclePhotography.App.DAO.Services
 {
@@ -23,11 +22,19 @@ namespace VehiclePhotography.App.DAO.Services
 
             var uri = $"https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/{vin}?format=json";
 
-            var responseString = await httpClient.GetStringAsync(uri);
+            try
+            {
+                var responseString = await httpClient.GetStringAsync(uri);
 
-            var response = JsonSerializer.Deserialize<NhtsaVehicleApiResponse>(responseString);
+                var response = JsonSerializer.Deserialize<NhtsaVehicleApiResponse>(responseString);
 
-            return response.ToVehicleInfo();
+                return response.ToVehicleInfo();
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new NhtsaVehicleApiException($"Error getting vehicle info for VIN '{vin}'", ex);
+            }
+
         }
     }
 }

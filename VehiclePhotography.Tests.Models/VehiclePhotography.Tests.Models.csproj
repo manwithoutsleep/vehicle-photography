@@ -20,9 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehiclePhotography.App.DAO\VehiclePhotography.App.DAO.csproj" />
     <ProjectReference Include="..\VehiclePhotography.App.Models\VehiclePhotography.App.Models.csproj" />
-    <ProjectReference Include="..\VehiclePhotography.Tests.Library\VehiclePhotography.Tests.Library.csproj" />
   </ItemGroup>
 
 </Project>

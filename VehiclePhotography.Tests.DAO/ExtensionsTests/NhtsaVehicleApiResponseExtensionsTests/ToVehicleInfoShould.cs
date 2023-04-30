@@ -1,7 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VehiclePhotography.App.DAO.DataTransferObjects;
 using VehiclePhotography.App.DAO.Extensions;
-using VehiclePhotography.App.Domain.Values;
+using VehiclePhotography.App.Models.Enums;
+using VehiclePhotography.App.Models.Values;
 
 namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseExtensionsTests
 {
@@ -34,8 +35,8 @@ namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseEx
             var actual = source.ToVehicleInfo();
 
             // Assert
-            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar", "expected/thumbnail/path.jpg");
-            Assert.AreEqual(expected.ToString(), actual.ToString());
+            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar");
+            Assert.AreEqual(expected.ToString(), actual!.ToString());
         }
 
         [TestMethod]
@@ -72,12 +73,12 @@ namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseEx
             var actual = source.ToVehicleInfo();
 
             // Assert
-            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar", "expected/thumbnail/path.jpg");
-            Assert.AreEqual(expected.ToString(), actual.ToString());
+            var expected = new VehicleInfo("expected make", "expected model", 1942, "expected vin", "PassengerCar");
+            Assert.AreEqual(expected.ToString(), actual!.ToString());
         }
 
         [TestMethod]
-        public void GivenValidNhtsaVehicleApiResponseWithNoResults_ReturnNull()
+        public void GivenValidNhtsaVehicleApiResponseWithEmptyResults_ReturnNull()
         {
             // Arrange
             var source = new NhtsaVehicleApiResponse
@@ -93,6 +94,50 @@ namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseEx
 
             // Assert
             Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void GivenValidNhtsaVehicleApiResponseWithNullResults_ReturnNull()
+        {
+            // Arrange
+            var source = new NhtsaVehicleApiResponse
+            {
+                Count = 0,
+                Message = "message",
+                SearchCriteria = "search criteria",
+                Results = null
+            };
+
+            // Act
+            var actual = source.ToVehicleInfo();
+
+            // Assert
+            Assert.IsNull(actual);
+        }
+
+        [TestMethod]
+        public void GivenValidNhtsaVehicleResponseWithNullValues_ReturnValidResultWithProperDefaults()
+        {
+            // Arrange
+            var source = new NhtsaVehicleApiResponse
+            {
+                Count = 1,
+                Message = "message",
+                SearchCriteria = "search criteria",
+                Results = new List<NhtsaVehicleApiResponseResult>
+                {
+                    new NhtsaVehicleApiResponseResult {
+                        VehicleType = "Motorcycle"
+                    }
+                }
+            };
+
+            // Act
+            var actual = source.ToVehicleInfo();
+
+            // Assert
+            var expected = new VehicleInfo(string.Empty, string.Empty, 0, string.Empty, "Motorcycle");
+            Assert.AreEqual(expected.ToString(), actual!.ToString());
         }
     }
 }

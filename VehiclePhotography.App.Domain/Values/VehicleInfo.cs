@@ -5,11 +5,12 @@ namespace VehiclePhotography.App.Domain.Values
 {
     public class VehicleInfo
     {
-        public string Make { get; private set; }
-        public string Model { get; private set; }
-        public int Year { get; private set; }
-        public string Vin { get; private set; }
-        public VehicleTypes VehicleType { get; private set; }
+        public string Make { get; }
+        public string Model { get; }
+        public int Year { get; }
+        public string Vin { get; }
+        public VehicleTypes VehicleType { get; }
+        public string ThumbnailPath { get; }
 
         public VehicleInfo(string make, string model, int year, string vin, string vehicleType)
         {

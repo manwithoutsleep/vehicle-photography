@@ -7,6 +7,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <Platform>x64</Platform>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VehiclePhotography.App.DAO\VehiclePhotography.App.DAO.csproj" />
+    <ProjectReference Include="..\VehiclePhotography.Tests.Library\VehiclePhotography.Tests.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ValueModels\" />
   </ItemGroup>
 
 </Project>

@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" />
@@ -22,9 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VehiclePhotography.App.DAO\VehiclePhotography.App.DAO.csproj" />
     <ProjectReference Include="..\VehiclePhotography.App.Domain\VehiclePhotography.App.Domain.csproj" />
-    <ProjectReference Include="..\VehiclePhotography.Tests.Library\VehiclePhotography.Tests.Library.csproj" />
+    <ProjectReference Include="..\VehiclePhotography.App.WinUI\VehiclePhotography.App.WinUI.csproj" />
   </ItemGroup>
 
 </Project>

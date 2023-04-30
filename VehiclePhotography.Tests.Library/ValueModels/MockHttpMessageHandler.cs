@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace VehiclePhotography.Tests.DAO.ValueModels
+namespace VehiclePhotography.Tests.Library.ValueModels
 {
     public class MockHttpMessageHandler : HttpMessageHandler
     {

@@ -2,10 +2,10 @@
 using VehiclePhotography.App.Domain.Enums;
 using VehiclePhotography.App.Domain.Values;
 
-namespace VehiclePhotography.Tests.Domain.EnumsTests.VehicleTypesTests
+namespace VehiclePhotography.Tests.Domain.ValuesTests.VehicleInfoTests
 {
     [TestClass]
-    public class VehicleTypeShould
+    public class VehicleInfoShould
     {
         [TestMethod]
         public void ReturnValidEnumWhenCreatedWithValidString()

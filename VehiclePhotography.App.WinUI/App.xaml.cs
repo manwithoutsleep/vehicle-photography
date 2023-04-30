@@ -6,6 +6,8 @@ using Microsoft.UI.Xaml;
 using System;
 using VehiclePhotography.App.DAO.Interfaces;
 using VehiclePhotography.App.DAO.Services;
+using VehiclePhotography.App.Domain.ViewModels;
+using VehiclePhotography.App.WinUI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -17,6 +19,7 @@ namespace WinUI
     /// </summary>
     public partial class App : Application
     {
+        private Window m_window;
         public new static App Current => (App)Application.Current;
         public IServiceProvider Services { get; }
 
@@ -34,9 +37,10 @@ namespace WinUI
         /// Invoked when the application is launched.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
+        protected override void OnLaunched(LaunchActivatedEventArgs args)
         {
-            m_window = new MainWindow();
+            var viewModel = Services.GetService<MainWindowViewModel>();
+            m_window = new MainWindow(viewModel);
             m_window.Activate();
         }
 
@@ -45,12 +49,11 @@ namespace WinUI
             var services = new ServiceCollection();
 
             services.AddSingleton<MainWindow>();
+            services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<IVehicleInfoDao, NhtsaVehicleApiDao>();
 
 
             return services.BuildServiceProvider();
         }
-
-        private Window m_window;
     }
 }

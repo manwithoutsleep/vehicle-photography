@@ -1,6 +1,6 @@
 ﻿using Moq;
 using System.Net;
-using VehiclePhotography.App.Models.Values;
+using VehiclePhotography.App.Models.Entities;
 using VehiclePhotography.Tests.Library.ValueModels;
 
 namespace VehiclePhotography.Tests.Library.ExpectedResponses

@@ -1,7 +1,7 @@
 ﻿using VehiclePhotography.App.Models.Enums;
 using VehiclePhotography.App.Models.Libraries;
 
-namespace VehiclePhotography.App.Models.Values
+namespace VehiclePhotography.App.Models.Entities
 {
     public class VehicleInfo
     {

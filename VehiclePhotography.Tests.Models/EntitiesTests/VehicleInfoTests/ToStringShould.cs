@@ -1,6 +1,6 @@
-﻿using VehiclePhotography.App.Models.Values;
+﻿using VehiclePhotography.App.Models.Entities;
 
-namespace VehiclePhotography.Tests.Models.ValuesTests.VehicleInfoTests
+namespace VehiclePhotography.Tests.Models.EntitiesTests.VehicleInfoTests
 {
     [TestClass()]
     public class ToStringShould

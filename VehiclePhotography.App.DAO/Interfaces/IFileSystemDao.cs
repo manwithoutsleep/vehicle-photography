@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using VehiclePhotography.App.Models.Entities;
 using VehiclePhotography.App.Models.Values;
 
 namespace VehiclePhotography.App.DAO.Interfaces

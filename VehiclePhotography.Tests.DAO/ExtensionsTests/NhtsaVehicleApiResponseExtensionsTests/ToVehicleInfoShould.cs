@@ -1,8 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VehiclePhotography.App.DAO.DataTransferObjects;
+﻿using VehiclePhotography.App.DAO.DataTransferObjects;
 using VehiclePhotography.App.DAO.Extensions;
-using VehiclePhotography.App.Models.Enums;
-using VehiclePhotography.App.Models.Values;
+using VehiclePhotography.App.Models.Entities;
 
 namespace VehiclePhotography.Tests.DAO.ExtensionsTests.NhtsaVehicleApiResponseExtensionsTests
 {

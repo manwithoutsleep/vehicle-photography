@@ -1,5 +1,5 @@
 ﻿using VehiclePhotography.App.DAO.DataTransferObjects;
-using VehiclePhotography.App.Models.Values;
+using VehiclePhotography.App.Models.Entities;
 
 namespace VehiclePhotography.App.DAO.Extensions
 {

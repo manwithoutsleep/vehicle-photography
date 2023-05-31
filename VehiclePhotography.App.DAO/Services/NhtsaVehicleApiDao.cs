@@ -1,9 +1,9 @@
 ﻿using VehiclePhotography.App.DAO.Interfaces;
-using VehiclePhotography.App.Models.Values;
 using System.Text.Json;
 using VehiclePhotography.App.DAO.DataTransferObjects;
 using VehiclePhotography.App.DAO.Extensions;
 using VehiclePhotography.App.Models.Exceptions;
+using VehiclePhotography.App.Models.Entities;
 
 namespace VehiclePhotography.App.DAO.Services
 {

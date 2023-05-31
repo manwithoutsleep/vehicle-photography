@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using VehiclePhotography.App.Models.Values;
+using VehiclePhotography.App.Models.Entities;
 
 namespace VehiclePhotography.App.DAO.Interfaces
 {

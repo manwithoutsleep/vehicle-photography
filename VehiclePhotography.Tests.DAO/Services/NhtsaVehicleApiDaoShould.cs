@@ -2,7 +2,7 @@
 using System.Net;
 using VehiclePhotography.App.DAO.Services;
 using VehiclePhotography.App.Models.Exceptions;
-using VehiclePhotography.App.Models.Values;
+using VehiclePhotography.App.Models.Entities;
 using VehiclePhotography.Tests.Library.ExpectedResponses;
 
 namespace VehiclePhotography.Tests.DAO
